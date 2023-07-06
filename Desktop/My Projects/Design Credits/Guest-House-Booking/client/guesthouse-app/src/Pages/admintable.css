@@ -1,0 +1,312 @@
+
+/* <-------Room adding Form css --------> */
+
+.mainss{
+  height: 100%;
+  min-height: 100vh;
+  margin-left: 200px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  background:#303841;;
+}
+.extra {
+  margin: auto;
+  background-color:  #2B3A55;
+  box-shadow: 0px 10px 16.83px 0.17px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding:20px;
+    height:300px;
+    width: 400px;
+}
+.extras{
+   background-color: #CE7777;
+}
+.susform{
+  padding: 15px 30px;
+}
+.newroom{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  margin-bottom: 15px;
+  }
+  .forming{
+   color: #fff;
+  }
+.r{
+  font-size: 16px;
+  padding:7px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+.radiobtns{
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.single{
+  color: #4C5A65;
+  margin-left:7px;
+  font-size:20px;
+  font-style:oblique;
+}
+.double{
+  color: #4C5A65;
+  margin-left:7px;
+  font-size:20px;
+  font-style:oblique;
+}
+.deluxe{
+  color: #4C5A65;
+  margin-left:7px;
+  font-size:20px;
+  font-style:oblique;
+}
+.rrrbut{
+  width: 100%;
+  padding-top: 10px;
+  text-align: center;
+}
+.rrr{
+  cursor: pointer;
+  width: 80px;
+  height: 35px;
+  color: #fff;
+  font-size:18px;
+  background-color: #CE7777;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.sub{
+  margin-top: 5px;
+  border: 2px solid #fff;
+}
+.newroomadmin{
+  text-align: center;
+  font-size: 30px;
+  color: #bcb4b4;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* <------Card.css-------> */
+
+.main1{
+    background-color: #718693;
+    min-height:100vh ;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+}
+.table1{
+  width: 60%;
+}
+.shh1{
+  width: 60%;
+  margin: auto;
+  display:flex;
+  flex-direction: row;
+  gap:40px;
+  padding:65px 35px;
+  background-color: #4C5A65;
+  border-radius: 12px;
+  
+}
+.ashd1{
+  background-color:#fff ;
+  border: transparent;
+  width:62%;
+  height: 30px;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: 15px;
+  color: #808080;
+}
+
+.butt{
+  cursor: pointer;
+  border:none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #a8cda1;
+  color: #333;
+  font-weight: 400;
+}
+.datepicker{
+  outline: none;
+  border: none;
+  padding: 8px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+.table2{
+  width: auto;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.bu{
+  background-color: #4C5A65;
+  padding: 8px;
+  outline: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.sf{
+ background-color: #fff;
+border:none;
+max-width: 62%;
+border-radius: 8px;
+padding: 16px;
+cursor: pointer;
+margin-left: auto;
+margin-right: auto;
+margin-top:40px;
+}
+
+
+/*<--------- Table.js css---------> */
+
+.maintable{
+    background-color:#f7f7f7;
+    margin-left: 200px;
+    height:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .table{
+  width: 100%;
+  height: 100%;
+ }
+ .tab{
+  margin: 50px 50px;
+ }
+  .tab.MuiTableRow-root{
+    height:20px;
+  }
+  
+.tab .MuiTableCell-root {
+    padding: 13px; 
+  }
+  .tab .MuiTableRow-root:nth-child(even) {
+    background-color: rgb(244, 239, 239);
+  } 
+ .tab.MuiTableCell{
+    head{
+        background-color:red;
+    }
+ }
+.statusbuttons{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.statusbuttons button{
+  border: none;
+  outline: none;
+  padding:6px 10px;
+  background-color: #025464;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.copy{
+  background-color: transparent;
+  padding:12px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: .1s background-color ease-in-out;
+}
+.copy:active{
+  background-color: #ccc;
+}
+ @media only screen and (max-width:1015px){
+.maintable,.main1,.mainss{
+  margin-left: 0;
+}
+
+}
+@media only screen and (max-width:899.94px){
+  .tss-1t2q2nr-MUIDataTableBodyCell-stackedHeader{
+    display:none !important;
+   }
+  .main1{
+    padding:80px 0;
+   flex-direction: column;
+   gap:50px
+  }
+  .table1{
+    width: 100%;
+  }
+  .table2{
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .shh1{
+    max-width: 400px;
+    
+  }
+  .tab{
+    margin: 50px 30px;
+   }
+   .mainss{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap:50px
+  }
+  .maintable{
+    padding-top: 50px;
+  }
+  }
+  @media only screen and (max-width:576px){
+    .tab{
+      margin: 20px;
+    }
+    .table2{
+      width: 90%;
+    }
+    .shh1{
+      width: 78%;
+      gap:10px;
+      padding:35px 25px;
+    }
+    .sf{
+     max-width:81%;
+     cursor: pointer;
+     margin-left:auto;
+     margin-right:auto;
+     }
+     .susform{
+      padding: 10px 10px;
+    }
+    } 
+    @media only screen and (max-width:450px){
+         .extra{
+          width:300px;
+          height: 290px;
+         }
+      } 
+      @media only screen and (max-width:350px){
+        .extra{
+         width:240px;
+         height: 290px;
+        }
+     } 
