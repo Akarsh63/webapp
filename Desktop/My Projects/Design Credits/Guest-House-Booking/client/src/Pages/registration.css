@@ -1,0 +1,163 @@
+
+.input_res{
+    outline: none;
+    border: none;
+    /* background: transparent; */
+}
+
+.container {
+    background: #fff;
+    box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba((63, 67, 80), 0.08) ;
+    border-radius: 8px;
+    width: 540px;
+    padding: 48px 56px;
+}
+.signin-form,.signup-form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.form-title{
+  color:#3f4350;
+  font-size: 22px;
+  font-weight: 600;
+  /* text-align: center; */
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+  height: 45px !important;
+}
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+  line-height: normal !important;
+}
+  .form-submit {
+    display: inline-block;
+    background: #1c58d9;
+    color: #fff;
+    border-bottom: none;
+    width: 100%;
+    padding: 15px 39px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer; }
+    .form-submit:hover {
+      background:#386fe5; }
+  .reg{
+    background:#1c58d9;
+  }
+  .reg:hover{
+    background: #386fe5;
+  }
+  .signup-link,.signin-link {
+    font-size: 16px;
+    color:#386fe5;
+  margin-left: 5px; }
+  .forgotpassword{
+    font-size: 15px;
+    color: #1c58d9;
+    text-decoration: none;
+  }
+  .term-service {
+    font-size: 13px;
+    color: #222; }
+.register-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    width: 100%; }
+
+/*   
+.input_res{
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 6px 30px;
+    font-family: serif;
+    box-sizing: border-box; }
+    .input_res:focus {
+      border-bottom: 1px solid #222; } */
+
+  .material-icons-name {
+    font-size: 15px; }
+
+
+  /* otp verification */
+  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    height:40px
+  }
+    .MuiOtpInput-TextField{
+      width:40px;
+      height:40px
+    }
+    .MuiInput-underline:before{
+      border: 'none',
+    }
+    .MuiInput-underline:after{
+      border-bottom: 'none',}
+
+  @media screen and (max-width: 768px) {
+    .css-tccdxk{
+      justify-content: space-between
+    }
+    .social-login {
+      justify-content: center;}
+  
+    .form-button {
+      text-align: center; }
+ }
+ @media screen and (max-width: 490px) {
+  .css-tccdxk{
+    gap: 10px !important;
+  }
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+    padding: 1px !important;
+  }
+  .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    padding: 0%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .MuiOtpInput-TextField{
+    width:37px !important;
+  }
+  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    border-top: none !important;
+    border-right: 0;
+    border-left: 0;
+  }
+}
+  @media screen and (max-width: 400px) {
+    .reg-title{
+      font-size: 17px !important;
+      text-align: center  !important;
+      font-weight: bold !important;
+    }
+    .css-tccdxk{
+      justify-content: space-between
+    }
+    
+    .container{
+      padding: 40px 30px;
+    }
+    .logintype{
+      margin: 12px  auto;
+    }
+    .logintypes{
+      border: 1px solid #f4f4f4;
+    }
+    .social-login {
+      flex-direction: column; }
+  
+    .social-label {
+      margin-right: 0px;
+      margin-bottom: 10px; } }
+  
+  
