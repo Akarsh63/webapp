@@ -2,33 +2,59 @@ const express = require('express');
 const router = express.Router();
 const roommodel=require('../pages/roommodel');
 const usersmodel = require('../pages/usersmodel');
+const facultymodel=require('../pages/facultymodel')
 const bookingsmodel=require('../pages/bookingmodel');
 const middleware=require('../middleware')
 var nodemailer = require('nodemailer');
 
 router.get('/', (req, res) => res.send('/book/:userId--->all bookings and status'));
 router.post('/book',middleware,async (req,res)=>{
-  let exist=await usersmodel.findById(req.userid);
-    if(!exist){
-      return res.status(400).send('User not found')
-    }
-    const {details}=req.body;
-    const rooms= await roommodel.find({_id:{$in :details.Rooms}})
-    const user=await usersmodel.findById(req.userid)
+  console.log(1)
+      let exist=await usersmodel.findById(req.userid);
+      let existfaculty = await facultymodel.findById(req.userid)
+      if(!exist && !existfaculty){
+        return res.status(400).send('User not found')
+      }
+      let user;
+      if(!exist){
+        user=existfaculty
+      }
+      else{
+        user=exist
+      }
+      const {
+        Firstname,
+        Lastname,
+        Email,
+        Phonenumber,
+        Address,
+        Rooms,
+        Roomstype,
+        Adults,
+        Meals,
+        Specialrequest,
+        Fromdate,
+        Enddate,
+      } = req.body;
+    
+    console.log(user)
+    const rooms= await roommodel.find({_id:{$in :Rooms}})
+    // const user=await usersmodel.findById(req.userid)
     const booking=new bookingsmodel({
         'userid':user._id,
-        "firstname":details.Firstname,
-        "lastname":details.Lastname,
-        "email":details.Email,
-        "phonenumber":details.Phonenumber,
-        "adults":details.Adults,
-        "address":details.Address,
-        "fromdate":details.Fromdate,
-        "enddate":details.Enddate,
-        "rooms":details.Rooms,
-        "roomstype":details.Roomstype,
-        "specialrequest":details.Specialrequest,
-        "meals":details.Meals
+        "firstname":Firstname,
+        "lastname":Lastname,
+        "email":Email,
+        "phonenumber":Phonenumber,
+        "adults":Adults,
+        "address":Address,
+        "fromdate":Fromdate,
+        "enddate":Enddate,
+        "rooms":Rooms,
+        "roomstype":Roomstype,
+        "specialrequest":Specialrequest,
+        "meals":Meals,
+        "usertype":user.role
     })
     const result=await booking.save()
     // console.log(result)
@@ -54,11 +80,18 @@ router.post('/book',middleware,async (req,res)=>{
     }
 })
 router.get('/book',middleware,async (req,res)=>{
-    let exist=await usersmodel.findById(req.userid);
-    if(!exist){
-      return res.status(400).send('User not found')
-    }
-    const user=await usersmodel.findById(req.userid)
+  let exist=await usersmodel.findById(req.userid);
+  let existfaculty = await facultymodel.findById(req.userid)
+  if(!exist && !existfaculty){
+    return res.status(400).send('User not found')
+  }
+  let user;
+  if(!exist){
+    user=existfaculty
+  }
+  else{
+    user=exist
+  }
     const bookings = await bookingsmodel.find({ _id: { $in: user.bookings } });
 
     const changeroomsbynumber = async (item) => {
@@ -73,18 +106,21 @@ router.get('/book',middleware,async (req,res)=>{
     
     try {
       await Promise.all(bookings.map(changeroomsbynumber));
+      console.log(bookings)
       res.status(200).json({
-        "Bookings": bookings
+        "Bookings": bookings,
+        "User":user
       });
     } catch (error) {
       res.status(500).json({ 'error': error });
     }
 })
 router.get('/:room',middleware,async(req,res)=>{
-    let exist=await usersmodel.findById(req.userid);
-    if(!exist){
-      return res.status(400).send('User not found')
-    }
+  let exist=await usersmodel.findById(req.userid);
+  let existfaculty = await facultymodel.findById(req.userid)
+  if(!exist && !existfaculty){
+    return res.status(400).send('User not found')
+  }
     const booking=await bookingsmodel.findById(req.params.room);
     try{
         res.status(200).json({"bookingdetail":booking})

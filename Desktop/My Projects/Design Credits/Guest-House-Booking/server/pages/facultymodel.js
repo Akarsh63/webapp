@@ -1,5 +1,5 @@
-const mongoose =require('mongoose');
-const userschema=new mongoose.Schema({
+const mongoose=require('mongoose');
+const facultySchema=new mongoose.Schema({
     "username":{
         type:String,
         required:true
@@ -20,8 +20,7 @@ const userschema=new mongoose.Schema({
     }],
     "role":{
         type:String,
-        default:'student'
+        default:'faculty'
     }
 })
-
-module.exports=usersmodel=mongoose.model('usersmodel', userschema)
+module.exports=facultymodel=mongoose.model("facultymodel",facultySchema);

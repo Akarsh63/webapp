@@ -12,6 +12,8 @@ router.get('/', (req, res) => res.send('Hello'))
       if(!exist){
         return res.status(400).send('Admin not found')
       }
+    const studentbookings = await bookingsmodel.find({usertype:"student"});
+    const facultybookings = await bookingsmodel.find({usertype:"faculty"});
     const bookings = await bookingsmodel.find({});
     const changeroomsbynumber = async (item) => {
       const roomNumbers = [];
@@ -23,12 +25,16 @@ router.get('/', (req, res) => res.send('Hello'))
     };
     
     try {
+      await Promise.all(studentbookings.map(changeroomsbynumber));
+      await Promise.all(facultybookings.map(changeroomsbynumber));
       await Promise.all(bookings.map(changeroomsbynumber));
-      res.status(200).json({
-        "Bookings": bookings
+      return res.status(200).json({
+        "Studentbookings": studentbookings,
+        "Facultybookings": facultybookings,
+        "Bookings":bookings
       });
     } catch (error) {
-      res.status(500).json({ 'error': error });
+      return res.status(500).json({ 'error': error });
     }
   })
       var transporter = nodemailer.createTransport({

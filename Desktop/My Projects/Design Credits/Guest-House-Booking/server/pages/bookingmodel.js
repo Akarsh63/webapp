@@ -47,7 +47,7 @@ const bookingschema= new mongoose.Schema({
     },
     "roomstype":{
         type:Array,
-        required:true
+        // required:true
     },
     "specialrequest":{
         type:String
@@ -59,7 +59,10 @@ const bookingschema= new mongoose.Schema({
     "status":{
         type:String,
         default:"Pending"
+    },
+    "usertype":{
+        type:String,
+        required:true
     }
-    
 })
 module.exports=bookingsmodel=mongoose.model("bookingsmodel",bookingschema)
