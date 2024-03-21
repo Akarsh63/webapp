@@ -1,0 +1,24 @@
+.main{
+    margin: auto;
+    background-color: antiquewhite;
+    padding:12%;
+    min-height: 100vh;
+}
+
+.buttons{
+    background-color:beige;
+    position:initial;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width:35%;
+    padding: 5%;
+}
+
+.button{
+    position: relative;
+    margin: auto;
+    padding: 10%;
+    font-size: 120%;
+    font-weight: bold;
+}

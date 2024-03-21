@@ -1,0 +1,90 @@
+.root{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewtransactioninfo{
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    max-width: 600px;
+}
+
+.headertransac{
+   text-align: center;
+   padding-bottom: 15px;
+   border-bottom: 1px solid silver;
+}
+.headertransac p{
+    font-size: 20px;
+    margin: 0%;
+}
+.transacdetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.transacdetails h3,h4,h5,p{
+    margin: 0%;
+}
+.transacdetails div{
+   display: flex;
+   flex-direction: column;
+   gap: 7px;
+}
+
+.transacdetails p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.transacdetails h3{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 350;
+}
+.transacdetails h4{
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.transacdetails h5{
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.sendmoney{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sendmoney{
+    padding: 25px;
+}
+.sendmoney button,input{
+    width: 380px;
+    margin: auto;
+    border: 1px solid #222222;
+    background: #fff;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 13px 10px;
+}
+.sendmoney button{
+    width: 400px;
+    background-color: #222222 !important;
+    color: #ffff !important;
+    cursor: pointer;
+    padding: 13px 20px;
+}

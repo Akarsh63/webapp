@@ -1,0 +1,22 @@
+.transactionspage{
+    padding:100px 30px;
+}
+.transactions{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.transactions div{
+    border:1px solid silver;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.transactions div:hover{
+    box-shadow: 0px 0px 4px 0px #00000040;
+    border: none;
+}

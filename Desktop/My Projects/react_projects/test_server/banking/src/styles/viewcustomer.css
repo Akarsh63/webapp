@@ -1,0 +1,70 @@
+.viewcustomerinfo{
+    padding-top: 90px;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-height: 100vh;
+}
+.imgcont{
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+.details{
+  padding: 20px;
+}
+.details-bal{
+    padding: 20px;
+    text-align: center;
+    border: 1px solid silver;
+}
+.details-buts{
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.details-buts button{
+    width: 60%;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #222222;
+    background: #fff;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 13px 23px;
+    transition: all 0.35s ease-in;
+}
+.homebut{
+    background-color: #222222 !important;
+    color: #ffff !important;
+}
+.details-buts button:hover{
+    background-color: #222222;
+    color: #ffff;
+}
+.viewcustomerinfo img{
+    height: 300px;
+}
+.viewcustomerinfo h3{
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 350;
+    margin: 0 0 6px;
+}
+.viewcustomerinfo h4{
+    font-size: 20px;
+    font-weight: 200;
+    margin:7px 0 0 ;
+}
+.viewcustomerinfo h5{
+    font-size: 20px;
+    font-weight: 100;
+    margin: 0;
+}

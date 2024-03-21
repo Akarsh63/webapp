@@ -1,0 +1,31 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 4px 0px #00000040;
+   justify-content: space-between;
+    padding: 17px 0px;
+    align-items: center;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+}
+
+.headertext{
+  margin-left:40px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.header ul{
+    margin-right: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}

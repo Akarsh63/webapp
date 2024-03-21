@@ -1,0 +1,16 @@
+{
+  "name": "test_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-server": "cd server && npm install",
+    "start-server": "cd server && nodeindex.js",
+    "install-client": "cd banking && npm install",
+    "build-client": "cd banking && npm run build",
+    "start-client": "cd banking && npm run start"
+  },
+  "author": "",
+  "license": "ISC"
+}
